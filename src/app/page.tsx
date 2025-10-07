@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import LearnMoreButton from "@/components/LearnMoreButton";
 
 export default function Home() {
@@ -274,7 +273,7 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-gray-600">
-                The reference feature is incredible. I can trust that my research is accurate and properly cited. It's like having a research assistant!
+                The reference feature is incredible. I can trust that my research is accurate and properly cited. It&apos;s like having a research assistant!
               </p>
             </div>
             <div className="bg-white rounded-2xl p-8 shadow-lg">
@@ -288,7 +287,7 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-gray-600">
-                I've tried many note-taking apps, but LuminNote is in a league of its own. The AI actually understands my content and creates meaningful summaries.
+                I&apos;ve tried many note-taking apps, but LuminNote is in a league of its own. The AI actually understands my content and creates meaningful summaries.
               </p>
             </div>
           </div>
