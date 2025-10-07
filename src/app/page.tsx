@@ -260,7 +260,7 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-gray-600">
-                "LuminNote has completely transformed how I study. The AI summaries save me hours of work, and the flashcards help me retain information so much better."
+                LuminNote has completely transformed how I study. The AI summaries save me hours of work, and the flashcards help me retain information so much better.
               </p>
             </div>
             <div className="bg-white rounded-2xl p-8 shadow-lg">
@@ -274,7 +274,7 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-gray-600">
-                "The reference feature is incredible. I can trust that my research is accurate and properly cited. It's like having a research assistant!"
+                The reference feature is incredible. I can trust that my research is accurate and properly cited. It's like having a research assistant!
               </p>
             </div>
             <div className="bg-white rounded-2xl p-8 shadow-lg">
@@ -288,7 +288,7 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-gray-600">
-                "I've tried many note-taking apps, but LuminNote is in a league of its own. The AI actually understands my content and creates meaningful summaries."
+                I've tried many note-taking apps, but LuminNote is in a league of its own. The AI actually understands my content and creates meaningful summaries.
               </p>
             </div>
           </div>
