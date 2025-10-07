@@ -29,7 +29,13 @@ export default function Home() {
                 Pricing
               </a>
               <a
-                href="https://app.luminnote.co.uk"
+                href="https://app.luminnote.com"
+                className="text-gray-600 hover:text-gray-900 transition-colors"
+              >
+                Login
+              </a>
+              <a
+                href="https://app.luminnote.com"
                 className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
               >
                 Get Started
@@ -54,7 +60,7 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://app.luminnote.co.uk"
+                href="https://app.luminnote.com"
                 className="bg-blue-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors"
               >
                 Get Started
@@ -346,7 +352,7 @@ export default function Home() {
                   </li>
                 </ul>
                 <a
-                  href="https://app.luminnote.com/signup"
+                  href="https://app.luminnote.com"
                   className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors block text-center"
                 >
                   Get Started
