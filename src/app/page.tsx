@@ -5,7 +5,6 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import GradientOrbs from '@/components/GradientOrbs';
 import AnimatedSection from '@/components/AnimatedSection';
-import AnimatedText from '@/components/AnimatedText';
 
 // Icons as components for cleaner code
 const SparkleIcon = () => (
