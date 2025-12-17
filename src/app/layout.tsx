@@ -1,30 +1,35 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
+const geist = Geist({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-geist",
+});
+
+const geistMono = Geist_Mono({
+  subsets: ["latin"],
+  variable: "--font-geist-mono",
 });
 
 export const metadata: Metadata = {
-  title: "LuminNote — AI Notes for Students",
-  description: "AI-powered notes, flashcards, and study tools built for students. The smartest way to take notes with LuminNote.",
-  keywords: ["AI notes", "flashcards", "study tools", "students", "note taking", "AI powered"],
+  title: "LuminNote — AI-Powered Notes for the Modern Student",
+  description: "Transform how you learn with AI-powered notes, intelligent flashcards, and research tools. Built for students who want to study smarter, not harder.",
+  keywords: ["AI notes", "flashcards", "study tools", "students", "note taking", "AI powered", "spaced repetition", "smart learning"],
   authors: [{ name: "LuminNote" }],
   creator: "LuminNote",
   publisher: "LuminNote",
   openGraph: {
-    title: "LuminNote — AI Notes for Students",
-    description: "AI-powered notes, flashcards, and study tools built for students.",
+    title: "LuminNote — AI-Powered Notes for the Modern Student",
+    description: "Transform how you learn with AI-powered notes, intelligent flashcards, and research tools.",
     url: "https://luminnote.co.uk",
     siteName: "LuminNote",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "LuminNote — AI Notes for Students",
-    description: "AI-powered notes, flashcards, and study tools built for students.",
+    title: "LuminNote — AI-Powered Notes for the Modern Student",
+    description: "Transform how you learn with AI-powered notes, intelligent flashcards, and research tools.",
   },
   robots: {
     index: true,
@@ -38,10 +43,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${inter.variable} font-sans antialiased`}
-      >
+    <html lang="en" className="scroll-smooth">
+      <body className={`${geist.variable} ${geistMono.variable} font-sans antialiased`}>
+        {/* Subtle noise texture overlay */}
+        <div className="noise-overlay" aria-hidden="true" />
         {children}
       </body>
     </html>
