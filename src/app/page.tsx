@@ -47,7 +47,7 @@ export default function Home() {
       title: 'AI-Powered Notes',
       description: 'Transform lectures into structured, intelligent summaries. Our AI understands context, extracts key concepts, and organises your knowledge automatically.',
       image: '/images/NoteEditor.png',
-      color: 'from-[#1e3a5f] to-[#2563eb]',
+      color: 'from-[#1e40af] to-[#3b82f6]',
     },
     {
       icon: (
@@ -58,7 +58,7 @@ export default function Home() {
       title: 'Intelligent Flashcards',
       description: 'Auto-generated flashcards with spaced repetition. Learn 2x faster with scientifically-proven memory techniques that adapt to your learning pace.',
       image: '/images/Flashcard2.png',
-      color: 'from-[#2563eb] to-[#3b82f6]',
+      color: 'from-[#2563eb] to-[#60a5fa]',
     },
     {
       icon: (
@@ -68,7 +68,7 @@ export default function Home() {
       ),
       title: 'Research & Citations',
       description: 'Get accurate academic sources and perfectly formatted citations. APA, MLA, Harvard, Chicago — all generated instantly from your notes.',
-      color: 'from-[#0d4f6e] to-[#0ea5e9]',
+      color: 'from-[#1d4ed8] to-[#3b82f6]',
     },
   ];
 
@@ -310,16 +310,21 @@ export default function Home() {
                 priority
               />
             </div>
-            {/* Floating elements for depth */}
+            {/* Floating liquid glass elements */}
             <motion.div
-              className="absolute -left-8 top-1/4 w-20 h-20 rounded-2xl bg-gradient-to-br from-[#1e3a5f]/30 to-[#2563eb]/20 backdrop-blur-xl border border-blue-400/10"
+              className="absolute -left-8 top-1/4 w-24 h-24 rounded-3xl bg-gradient-to-br from-blue-500/10 to-blue-600/5 backdrop-blur-2xl border border-white/5 shadow-[0_8px_32px_rgba(59,130,246,0.15)]"
               animate={{ y: [0, -20, 0], rotate: [0, 5, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
             />
             <motion.div
-              className="absolute -right-8 top-1/3 w-16 h-16 rounded-xl bg-gradient-to-br from-[#2563eb]/20 to-[#3b82f6]/20 backdrop-blur-xl border border-blue-400/10"
+              className="absolute -right-8 top-1/3 w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-400/10 to-blue-500/5 backdrop-blur-2xl border border-white/5 shadow-[0_8px_32px_rgba(59,130,246,0.1)]"
               animate={{ y: [0, 15, 0], rotate: [0, -5, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
+            />
+            <motion.div
+              className="absolute right-20 bottom-20 w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500/15 to-transparent backdrop-blur-xl border border-white/5"
+              animate={{ y: [0, 10, 0], scale: [1, 1.05, 1] }}
+              transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
             />
           </motion.div>
         </motion.div>
