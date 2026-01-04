@@ -3,7 +3,6 @@
 import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
-import GradientOrbs from '@/components/GradientOrbs';
 import AnimatedSection from '@/components/AnimatedSection';
 
 // Icons as components for cleaner code
@@ -120,8 +119,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-[var(--background)] text-[var(--foreground)] overflow-x-hidden">
-      <GradientOrbs />
+    <div className="w-full overflow-x-hidden">
       
       {/* ═══════════════════════════════════════════════════════════════
           NAVIGATION
@@ -650,43 +648,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════════════════════════
-          FOOTER
-          ═══════════════════════════════════════════════════════════════ */}
-      <footer className="border-t border-[var(--border)] py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-            <div className="flex items-center space-x-3">
-              <Image
-                src="/images/LN.png"
-                alt="LuminNote Logo"
-                width={32}
-                height={32}
-                className="rounded-lg"
-              />
-              <span className="text-lg font-semibold">LuminNote</span>
-            </div>
-            
-            <div className="flex items-center gap-8">
-              {['About', 'Contact', 'Privacy', 'Terms'].map((item) => (
-                <a
-                  key={item}
-                  href="#"
-                  className="text-[var(--foreground-muted)] hover:text-[var(--foreground)] transition-colors text-sm"
-                >
-                  {item}
-                </a>
-              ))}
-            </div>
-          </div>
-          
-          <div className="mt-12 pt-8 border-t border-[var(--border)] text-center">
-            <p className="text-[var(--foreground-muted)] text-sm">
-              © {new Date().getFullYear()} LuminNote. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }

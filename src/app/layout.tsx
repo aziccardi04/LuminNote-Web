@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import GradientOrbs from "@/components/GradientOrbs";
+import SiteFooter from "@/components/SiteFooter";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -47,7 +49,11 @@ export default function RootLayout({
       <body className={`${geist.variable} ${geistMono.variable} font-sans antialiased`}>
         {/* Subtle noise texture overlay */}
         <div className="noise-overlay" aria-hidden="true" />
-        {children}
+        <div className="min-h-screen flex flex-col">
+          <GradientOrbs />
+          <main className="flex-1">{children}</main>
+          <SiteFooter />
+        </div>
       </body>
     </html>
   );
