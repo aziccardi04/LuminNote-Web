@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import GradientOrbs from "@/components/GradientOrbs";
 import SiteFooter from "@/components/SiteFooter";
+import { Analytics } from "@vercel/analytics/next";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -53,6 +54,7 @@ export default function RootLayout({
           <GradientOrbs />
           <main className="flex-1">{children}</main>
           <SiteFooter />
+          <Analytics />
         </div>
       </body>
     </html>
