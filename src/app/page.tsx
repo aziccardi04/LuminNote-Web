@@ -4,6 +4,8 @@ import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import AnimatedSection from '@/components/AnimatedSection';
+import LandingFlashcardDemo from '@/components/LandingFlashcardDemo';
+import HeroAppDemo from '@/components/landing/HeroAppDemo';
 
 // Icons as components for cleaner code
 const SparkleIcon = () => (
@@ -31,9 +33,12 @@ export default function Home() {
     offset: ['start start', 'end start'],
   });
   
-  const heroOpacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
-  const heroScale = useTransform(scrollYProgress, [0, 0.5], [1, 0.95]);
-  const heroY = useTransform(scrollYProgress, [0, 0.5], [0, 50]);
+  // Hero text fades on scroll, but the demo stays visible
+  const heroTextOpacity = useTransform(scrollYProgress, [0, 0.4], [1, 0]);
+  const heroScale = useTransform(scrollYProgress, [0, 0.9], [1, 0.98]);
+  const heroY = useTransform(scrollYProgress, [0, 0.9], [0, 30]);
+  // Demo section doesn't fade - stays at full opacity
+  const heroDemoOpacity = 1;
 
   const features = [
     {
@@ -55,7 +60,7 @@ export default function Home() {
       ),
       title: 'Intelligent Flashcards',
       description: 'Auto-generated flashcards with spaced repetition. Learn 2x faster with scientifically-proven memory techniques that adapt to your learning pace.',
-      image: '/images/Flashcard2.png',
+      isInteractiveDemo: true,
       color: 'from-[#2563eb] to-[#60a5fa]',
     },
     {
@@ -192,9 +197,13 @@ export default function Home() {
         
         <motion.div 
           className="max-w-7xl mx-auto w-full"
-          style={{ opacity: heroOpacity, scale: heroScale, y: heroY }}
+          style={{ scale: heroScale, y: heroY }}
         >
-          <div className="text-center max-w-4xl mx-auto">
+          {/* Hero text content - fades on scroll */}
+          <motion.div 
+            className="text-center max-w-4xl mx-auto"
+            style={{ opacity: heroTextOpacity }}
+          >
             {/* Badge */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -287,9 +296,9 @@ export default function Home() {
                 <span>Cancel anytime</span>
               </div>
             </motion.div>
-          </div>
+          </motion.div>
 
-          {/* Hero Image */}
+          {/* Hero Interactive Demo */}
           <motion.div
             initial={{ opacity: 0, y: 60 }}
             animate={{ opacity: 1, y: 0 }}
@@ -297,15 +306,8 @@ export default function Home() {
             className="mt-20 relative"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-[var(--background)] via-transparent to-transparent z-10 pointer-events-none" />
-            <div className="relative rounded-2xl overflow-hidden glass-card p-2 max-w-5xl mx-auto">
-              <Image
-                src="/images/Homepage.png"
-                alt="LuminNote Dashboard"
-                width={1200}
-                height={700}
-                className="rounded-xl w-full"
-                priority
-              />
+            <div className="relative max-w-5xl mx-auto">
+              <HeroAppDemo />
             </div>
             {/* Floating liquid glass elements */}
             <motion.div
@@ -380,7 +382,11 @@ export default function Home() {
                       </motion.a>
                     </div>
                     <div className="lg:w-1/2">
-                      {feature.image ? (
+                      {feature.isInteractiveDemo ? (
+                        <div className="relative rounded-xl overflow-hidden" style={{ minHeight: '400px' }}>
+                          <LandingFlashcardDemo />
+                        </div>
+                      ) : feature.image ? (
                         <div className="relative rounded-xl overflow-hidden border border-[var(--border)]">
                           <Image
                             src={feature.image}
