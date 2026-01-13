@@ -273,42 +273,45 @@ export default function LandingFlashcardDemo({ onCtaClick }: LandingFlashcardDem
           </span>
         </div>
 
-        {/* Question Card */}
-        {!studySession.showAnswer && (
-          <div className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-800 rounded-2xl p-6 min-h-[200px] flex flex-col justify-center border border-gray-200 dark:border-gray-600 shadow-lg">
-            <div className="text-center">
-              <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 mb-4">
-                <span className="w-2 h-2 bg-gray-400 rounded-full mr-2 animate-pulse"></span>
-                Question
-              </div>
-              <h3 className="text-lg font-bold text-gray-900 dark:text-white leading-relaxed mb-4">
-                {currentCard.question}
-              </h3>
-              <div className="inline-flex items-center text-sm text-gray-500 dark:text-gray-400">
-                <span className="animate-bounce mr-2">👆</span>
-                Click &quot;Show Answer&quot; to reveal
+        {/* Card Container - Fixed height to prevent layout shift */}
+        <div className="h-[200px] sm:h-[220px]">
+          {/* Question Card */}
+          {!studySession.showAnswer && (
+            <div className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-800 rounded-2xl p-4 sm:p-6 h-full flex flex-col justify-center border border-gray-200 dark:border-gray-600 shadow-lg overflow-hidden">
+              <div className="text-center">
+                <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 mb-3">
+                  <span className="w-2 h-2 bg-gray-400 rounded-full mr-2 animate-pulse"></span>
+                  Question
+                </div>
+                <h3 className="text-base sm:text-lg font-bold text-gray-900 dark:text-white leading-relaxed mb-3 line-clamp-3">
+                  {currentCard.question}
+                </h3>
+                <div className="inline-flex items-center text-xs sm:text-sm text-gray-500 dark:text-gray-400">
+                  <span className="animate-bounce mr-2">👆</span>
+                  Click &quot;Show Answer&quot; to reveal
+                </div>
               </div>
             </div>
-          </div>
-        )}
+          )}
 
-        {/* Answer Card */}
-        {studySession.showAnswer && (
-          <div className="bg-gradient-to-br from-green-50 to-gray-50 dark:from-green-900/20 dark:to-gray-800 rounded-2xl p-6 min-h-[200px] flex flex-col justify-center border border-green-200 dark:border-green-700 shadow-lg">
-            <div className="text-center">
-              <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-300 mb-4">
-                <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
-                Answer
-              </div>
-              <p className="text-base text-gray-800 dark:text-gray-200 leading-relaxed font-medium mb-4">
-                {currentCard.answer}
-              </p>
-              <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300">
-                Difficulty: {currentCard.difficulty}
+          {/* Answer Card */}
+          {studySession.showAnswer && (
+            <div className="bg-gradient-to-br from-green-50 to-gray-50 dark:from-green-900/20 dark:to-gray-800 rounded-2xl p-4 sm:p-6 h-full flex flex-col justify-center border border-green-200 dark:border-green-700 shadow-lg overflow-hidden">
+              <div className="text-center overflow-y-auto">
+                <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-300 mb-3">
+                  <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
+                  Answer
+                </div>
+                <p className="text-sm sm:text-base text-gray-800 dark:text-gray-200 leading-relaxed font-medium mb-3 line-clamp-4">
+                  {currentCard.answer}
+                </p>
+                <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300">
+                  Difficulty: {currentCard.difficulty}
+                </div>
               </div>
             </div>
-          </div>
-        )}
+          )}
+        </div>
       </div>
 
       {/* Action Buttons */}

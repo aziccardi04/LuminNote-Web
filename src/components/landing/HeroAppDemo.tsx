@@ -166,7 +166,7 @@ export default function HeroAppDemo() {
     phase: 'uploading',
     eta: TOTAL_DURATION_SECONDS,
   });
-  const [sidebarExpanded, setSidebarExpanded] = useState(true);
+  const [sidebarExpanded, setSidebarExpanded] = useState(false);
 
   const processingIntervalRef = useRef<NodeJS.Timeout | null>(null);
   const startTimeRef = useRef<number>(0);

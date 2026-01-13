@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { useRef } from 'react';
+import { useRef, useEffect } from 'react';
 import AnimatedSection from '@/components/AnimatedSection';
 import LandingFlashcardDemo from '@/components/LandingFlashcardDemo';
 import HeroAppDemo from '@/components/landing/HeroAppDemo';
@@ -32,6 +32,11 @@ export default function Home() {
     target: heroRef,
     offset: ['start start', 'end start'],
   });
+  
+  // Scroll to top on page load
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   
   // Hero text fades on scroll, but the demo stays visible
   const heroTextOpacity = useTransform(scrollYProgress, [0, 0.4], [1, 0]);
