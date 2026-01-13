@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect, useCallback, useRef } from 'react';
-import './FlashcardView.css';
 
 // Hardcoded demo flashcard set - matches app structure
 const DEMO_SET = {
