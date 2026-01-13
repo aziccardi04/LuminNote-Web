@@ -37,8 +37,6 @@ export default function Home() {
   const heroTextOpacity = useTransform(scrollYProgress, [0, 0.4], [1, 0]);
   const heroScale = useTransform(scrollYProgress, [0, 0.9], [1, 0.98]);
   const heroY = useTransform(scrollYProgress, [0, 0.9], [0, 30]);
-  // Demo section doesn't fade - stays at full opacity
-  const heroDemoOpacity = 1;
 
   const features = [
     {

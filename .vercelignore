@@ -1,0 +1,20 @@
+# Exclude reference files from build
+Dashboard.tsx
+Sidebar.tsx
+Homepage.tsx
+NoteEditor.tsx
+LectureUpload.tsx
+FlashcardView.tsx
+FlashcardView.css
+ModuleView.tsx
+DirectSearch.tsx
+ThemeToggle.tsx
+Settings.tsx
+ConfirmDialog.tsx
+AlertDialog.tsx
+UpgradePrompt.tsx
+RichTextEditor.tsx
+ReferenceSidebar.tsx
+ReferenceTooltip.tsx
+biologynotes.txt
+Flashcard2.png
