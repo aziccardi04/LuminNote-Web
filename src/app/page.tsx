@@ -33,9 +33,18 @@ export default function Home() {
     offset: ['start start', 'end start'],
   });
   
-  // Scroll to top on page load
+  // Force scroll to top on page load - runs after DOM is ready
   useEffect(() => {
-    window.scrollTo(0, 0);
+    // Use setTimeout to ensure this runs after all other effects
+    const timer = setTimeout(() => {
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+      // Also reset scroll restoration
+      if ('scrollRestoration' in window.history) {
+        window.history.scrollRestoration = 'manual';
+      }
+    }, 0);
+    
+    return () => clearTimeout(timer);
   }, []);
   
   // Hero text fades on scroll, but the demo stays visible

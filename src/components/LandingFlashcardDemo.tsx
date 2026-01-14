@@ -139,10 +139,8 @@ export default function LandingFlashcardDemo({ onCtaClick }: LandingFlashcardDem
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [studySession.showAnswer, studySession.currentIndex, isComplete, handleShowAnswer, handleAnswer, handlePreviousCard]);
 
-  // Focus container for keyboard events
-  useEffect(() => {
-    containerRef.current?.focus();
-  }, []);
+  // Keyboard navigation without auto-focusing (which causes scroll)
+  // The tabIndex on the container allows keyboard events when user interacts
 
   // Completion state
   if (isComplete) {
