@@ -120,9 +120,9 @@ export default function Home() {
     },
     {
       quote: "I've tried many note-taking apps, but LuminNote is in a league of its own. It actually understands my content.",
-      author: 'Sarah J.',
+      author: 'Anna S.',
       role: 'Psychology Student, UCL',
-      avatar: 'SJ',
+      avatar: 'AS',
     },
   ];
 
@@ -180,13 +180,13 @@ export default function Home() {
 
                 <div className="flex items-center space-x-3">
                   <a
-                    href="https://app.luminnote.com"
+                    href="https://app.luminnote.com/login"
                     className="hidden sm:block px-4 py-2 text-[var(--foreground-secondary)] hover:text-[var(--foreground)] transition-colors text-sm font-medium"
                   >
                     Sign In
                   </a>
                   <motion.a
-                    href="https://app.luminnote.com"
+                    href="https://app.luminnote.com/signup"
                     className="btn-primary text-sm"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
@@ -264,7 +264,7 @@ export default function Home() {
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
               <motion.a
-                href="https://app.luminnote.com"
+                href="https://app.luminnote.com/signup"
                 className="btn-primary text-base px-8 py-4"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.98 }}
@@ -305,7 +305,7 @@ export default function Home() {
                 <svg className="w-4 h-4 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
-                <span>Cancel anytime</span>
+                <span>Start learning today</span>
               </div>
             </motion.div>
           </motion.div>
@@ -386,7 +386,7 @@ export default function Home() {
                         {feature.description}
                       </p>
                       <motion.a
-                        href="https://app.luminnote.com"
+                        href="https://app.luminnote.com/signup"
                         className="inline-flex items-center gap-2 text-[var(--accent-primary)] font-medium hover:gap-3 transition-all"
                         whileHover={{ x: 5 }}
                       >
@@ -615,7 +615,7 @@ export default function Home() {
                 </ul>
 
                 <motion.a
-                  href="https://app.luminnote.com"
+                  href="https://app.luminnote.com/signup"
                   className="btn-primary w-full justify-center text-lg py-4"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
@@ -624,9 +624,7 @@ export default function Home() {
                   <ArrowRightIcon />
                 </motion.a>
 
-                <p className="text-center text-sm text-[var(--foreground-muted)] mt-6">
-                  7-day free trial. Cancel anytime.
-                </p>
+                {/* Free trial message removed */}
               </motion.div>
             </div>
           </AnimatedSection>
@@ -653,7 +651,7 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <motion.a
-                href="https://app.luminnote.com"
+                href="https://app.luminnote.com/signup"
                 className="btn-primary text-lg px-10 py-5"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.98 }}
