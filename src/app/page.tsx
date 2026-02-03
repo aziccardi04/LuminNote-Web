@@ -646,7 +646,7 @@ export default function Home() {
               Ready to transform how you study?
             </h2>
             <p className="text-lg text-[var(--foreground-secondary)] mb-10 max-w-2xl mx-auto">
-              Join thousands of students who are already studying smarter with LuminNote. 
+              Join students who are already studying smarter with LuminNote. 
               Start free today — no credit card required.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
