@@ -59,8 +59,8 @@ export default function Home() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
         </svg>
       ),
-      title: 'AI-Powered Notes',
-      description: 'Transform lectures into structured, intelligent summaries. Our AI understands context, extracts key concepts, and organises your knowledge automatically.',
+      title: 'Notes you can actually utilise',
+      description: 'Transform lectures into structured, intelligent summaries. No more wasting time copying from slides',
       image: '/images/NoteEditor.png',
       color: 'from-[#1e40af] to-[#3b82f6]',
     },
@@ -70,8 +70,8 @@ export default function Home() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
         </svg>
       ),
-      title: 'Intelligent Flashcards',
-      description: 'Auto-generated flashcards with spaced repetition. Learn 2x faster with scientifically-proven memory techniques that adapt to your learning pace.',
+      title: 'Flashcars you will actually use',
+      description: 'Instant flashcards built from your notes. Designed aound active recall, the most efficeint way to strengthen memory.',
       isInteractiveDemo: true,
       color: 'from-[#2563eb] to-[#60a5fa]',
     },
@@ -82,7 +82,7 @@ export default function Home() {
         </svg>
       ),
       title: 'Research & Citations',
-      description: 'Get accurate academic sources and perfectly formatted citations. APA, MLA, Harvard, Chicago — all generated instantly from your notes.',
+      description: 'Get accurate academic sources and perfectly formatted citations. Connect your notes to real academic research, then genrate citations in seconds',
       color: 'from-[#1d4ed8] to-[#3b82f6]',
     },
   ];
@@ -90,26 +90,26 @@ export default function Home() {
   const steps = [
     {
       number: '01',
-      title: 'Upload your content',
-      description: 'Drop in lecture notes, PDFs, recordings, or any study material.',
+      title: 'Add your notes',
+      description: 'We identify the key themes and arguments youre working with.',
     },
     {
       number: '02',
-      title: 'AI transforms it',
-      description: 'Our models structure, summarise, and create study materials instantly.',
+      title: 'Find relevant research',
+      description: 'Access real academic papers connected to your topics, fast.',
     },
     {
       number: '03',
-      title: 'Study smarter',
-      description: 'Use personalised flashcards and summaries to learn more effectively.',
+      title: 'Reference correctly',
+      description: 'Generate properly formatted citations in APA, MLA, Harvard, Chicago or Vancouver, instantly.',
     },
   ];
 
   const testimonials = [
     {
-      quote: "LuminNote has completely transformed how I study. The AI summaries save me hours of work every week.",
+      quote: "LuminNote has transformed how I learn. The summaries save me hours of work every week.",
       author: 'Emma S.',
-      role: 'Medical Student, Oxford',
+      role: 'Medical Student, Nottingham',
       avatar: 'ES',
     },
     {
@@ -119,7 +119,7 @@ export default function Home() {
       avatar: 'JD',
     },
     {
-      quote: "I've tried many note-taking apps, but LuminNote is in a league of its own. It actually understands my content.",
+      quote: "I've tried many note-taking apps, but LuminNote is the easisets to use and It actually understands my content.",
       author: 'Anna S.',
       role: 'Psychology Student, UCL',
       avatar: 'AS',
@@ -127,12 +127,11 @@ export default function Home() {
   ];
 
   const pricingFeatures = [
-    'Unlimited AI-powered notes',
+    'Automatic Lecture Notes',
     'Smart flashcard generation',
     'Research & citation tools',
     'Priority support',
-    'Advanced study analytics',
-    'Export to any format',
+    'Essay Planning',
   ];
 
   return (
@@ -224,7 +223,7 @@ export default function Home() {
               className="inline-flex items-center gap-2 badge mb-8"
             >
               <SparkleIcon />
-              <span>AI-powered learning, reimagined</span>
+              <span>From Lectures to first-class thinking</span>
             </motion.div>
 
             {/* Headline */}
@@ -252,8 +251,8 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="text-lg sm:text-xl text-[var(--foreground-secondary)] mb-10 max-w-2xl mx-auto leading-relaxed"
             >
-              Transform your lectures into intelligent summaries, flashcards, and research — all powered by AI. 
-              Study less, learn more.
+              Use your lecture notes to create flashcards for active recall, summaries, and essay plans that actually match
+              the marking criteria, so you can focus on understanding instead of formating.
             </motion.p>
 
             {/* CTAs */}
@@ -358,7 +357,8 @@ export default function Home() {
               <span className="gradient-text"> learn smarter</span>
             </h2>
             <p className="text-lg text-[var(--foreground-secondary)] max-w-2xl mx-auto">
-              Powerful AI tools designed specifically for students. No fluff, just the features that actually make a difference.
+              Powerful tools designed specifically for students. Everythings designed to reduce overload
+              , so you can focus on understanding.
             </p>
           </AnimatedSection>
 
